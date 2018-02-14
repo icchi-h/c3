@@ -34,12 +34,12 @@ c3_axis_internal_fn = AxisInternal.prototype;
 
 c3_axis_internal_fn.axisX = function (selection, x, tickOffset) {
     selection.attr("transform", function (d) {
-        return "translate(" + Math.ceil(x(d) + tickOffset) + ", 0)";
+        return "translate(" + Math.ceil(x(d) + tickOffset) + ", -6)";
     });
 };
 c3_axis_internal_fn.axisY = function (selection, y) {
     selection.attr("transform", function (d) {
-        return "translate(0," + Math.ceil(y(d)) + ")";
+        return "translate(6, " + Math.ceil(y(d)) + ")";
     });
 };
 c3_axis_internal_fn.scaleExtent = function (domain) {
